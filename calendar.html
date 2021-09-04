@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>single date calendar</title>
+	<style>
+		body{
+		background-color:#f7fafa;
+		font-family:arial;
+		}
+		#dd{
+		height:50vh;
+		width:30vw;
+		background-color:#EEEEEE;
+		border:none;
+		text-align:center;
+		box-shadow:15px 15px 5px lightgrey;
+		margin:20vh auto;
+		font-size:6vw;
+		box-sizing:border-box;
+		}
+		#cdd{
+		height:35%;
+		width:100%;
+		background-color:red;
+		border:none;
+		text-align:center;
+		color:white;
+		font-size:5vw;
+		margin-bottom:5%;
+		padding-top:5%;
+		box-sizing:border-box;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="dd">
+		<div id="cdd"></div>
+	</div>
+
+<script>
+	let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+	let months = ['Jan','Feb','Mar','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	let dt = new Date();
+	let cMonth = dt.getMonth();
+	let cDate = dt.getDate();
+	let cDay = dt.getDay();
+	
+	document.getElementById("cdd").innerHTML = days[cDay];
+	document.getElementById("dd").innerHTML += months[cMonth]+"<br>";
+	document.getElementById("dd").innerHTML += cDate;
+</script>
+</body>
+
+</html>
